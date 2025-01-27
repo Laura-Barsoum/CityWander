@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register - CityWander</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRAB+JY8p5vHcW2z8SOnQXy2y0v6r4bmST5nZNeQG44wexf8n4m8p4N0A" crossorigin="anonymous">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+<body>
+  <!-- Navigation Bar (same as on the login page) -->
+  <nav class="navbar2">
+    <div class="container">
+      <div class="logo-container">
+        <img src="logo.jpeg" alt="CityWander Logo" class="logo">
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="attractions.html">Attractions</a></li>
+        <li><a href="booking.html">Booking</a></li>
+        <li><a href="dining.html">Dining</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="reviews.html">Reviews</a></li>
+        <li><a href="surprise.html">Surprise Me</a></li>
+        <li><a href="quiz.html">Personalised Quiz</a></li>
+        <li><a href="buddy.html">Travel buddy</a></li>
+      </ul>
+       <!-- Login/Logout Section -->
+       <div id="login-container">
+        <button id="login-btn" onclick="window.location.href='login.html'">Login</button>
+        <div id="user-info" style="display:none;">
+          <span id="username"></span> <button onclick="logout()">Logout</button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Registration Form Section -->
+  <section class="register-section">
+    <div class="container">
+      <h2>Register for CityWander</h2>
+      <form id="register-form">
+        <div class="form-group">
+            <label for="full-name">Full Name</label>
+            <input type="text" id="full-name" name="fullName" placeholder="Enter your full name" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="Enter your password" required>
+        </div>
+        <button type="submit" class="submit-btn">Register</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer>
+    <div class="container text-center">
+      <p>&copy; 2024 CityWander. All Rights Reserved.</p>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script src="mainscript.js"></script>
+  <script src="register.js"></script>
+</body>
+</html>

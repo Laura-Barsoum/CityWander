@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CityWander - Dining & Restaurant Suggestions</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+<!-- AOS (Animate on Scroll) Library -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+<!-- Navigation Bar -->
+<nav class="navbar2">
+<div class="container">
+<div class="logo-container">
+<a href="index.html">
+<img src="logo.jpeg" alt="CityWander Logo" class="logo">
+</a>
+</div>
+<ul class="nav-links">
+<li><a href="index.html">Home</a></li>
+<li><a href="attractions.html" class="active">Attractions</a></li>
+<li><a href="booking.html">Booking</a></li>
+<li><a href="dining.html">Dining</a></li>
+<li><a href="events.html">Events</a></li>
+<li><a href="reviews.html">Reviews</a></li>
+<li><a href="surprise.html">Surprise Me</a></li>
+<li><a href="quiz.html">Personalised Quiz</a></li>
+<li><a href="buddy.html">Travel buddy</a></li>
+</ul>
+<!-- Login/Logout Section -->
+<div id="login-container">
+<button id="login-btn" onclick="window.location.href='login.html'">Login</button>
+<div id="user-info" style="display:none;">
+<span id="username"></span> <button onclick="logout()">Logout</button>
+</div>
+</div>
+</div>
+</nav>
+<!-- Hero Section for Dining Page -->
+<header class="hero-section" data-aos="fade-down">
+<div class="container text-center">
+<h1>Explore Cairo's Best Dining Spots</h1>
+<p>Uncover Cairo's hidden culinary treasures beyond the beaten path</p>
+</div>
+</header>
+<!-- Dining Suggestions Section -->
+<section class="white-section2" data-aos="fade-up">
+<div class="container">
+<h2>Hidden Culinary Gems of Cairo</h2>
+<div class="dining-list">
+<!-- Restaurant 1 -->
+<div class="dining-item" data-aos="fade-right">
+<h3>Al Khal Egyptian Restaurant</h3>
+<p><strong>Location:</strong> Zamalek, Cairo</p>
+<p><strong>Cuisine:</strong> Traditional Egyptian</p>
+<p>Al Khal offers a cozy ambiance with authentic Egyptian flavors. From hearty koshary to tender lamb, this is a favorite among locals.</p>
+</div>
+
+<!-- Restaurant 2 -->
+<div class="dining-item" data-aos="fade-left">
+<h3>La Trattoria</h3>
+<p><strong>Location:</strong> Downtown Cairo</p>
+<p><strong>Cuisine:</strong> Italian</p>
+<p>A classic Italian dining spot with a relaxed atmosphere. Known for its handmade pasta and selection of fine wines.</p>
+</div>
+
+<!-- Restaurant 3 -->
+<div class="dining-item" data-aos="fade-right">
+<h3>Zooba</h3>
+<p><strong>Location:</strong> Maadi, Cairo</p>
+<p><strong>Cuisine:</strong> Modern Egyptian Street Food</p>
+<p>Zooba combines traditional street food with a modern twist. Try their take on taameya and hawawshi for a unique experience.</p>
+</div>
+
+<!-- New Hidden Gem: Restaurant 4 -->
+<div class="dining-item" data-aos="fade-left">
+<h3>Fasahet Somaya</h3>
+<p><strong>Location:</strong> Garden City, Cairo</p>
+<p><strong>Cuisine:</strong> Home-style Egyptian</p>
+<p>A tiny, tucked-away restaurant where chef Somaya serves daily-changing home-cooked meals. Seating is limited, and the menu depends on local market ingredients. A true locals' secret.</p>
+</div>
+
+<!-- New Hidden Gem: Restaurant 5 -->
+<div class="dining-item" data-aos="fade-right">
+<h3>Tabali</h3>
+<p><strong>Location:</strong> Zamalek, Cairo</p>
+<p><strong>Cuisine:</strong> Modern Egyptian Fusion</p>
+<p>Nestled in a quiet street, Tabali offers innovative Egyptian cuisine using locally sourced ingredients. Their menu reimagines traditional dishes with contemporary techniques.</p>
+</div>
+
+<!-- New Hidden Gem: Restaurant 6 -->
+<div class="dining-item" data-aos="fade-left">
+<h3>Sharkiya Grill</h3>
+<p><strong>Location:</strong> Old Cairo</p>
+<p><strong>Cuisine:</strong> Traditional Grilled Meats</p>
+<p>A small, unassuming grill house known only to locals. Specializes in perfectly seasoned, slow-cooked meats and traditional side dishes. No frills, just exceptional flavor.</p>
+</div>
+
+<!-- New Hidden Gem: Restaurant 7 -->
+<div class="dining-item" data-aos="fade-right">
+<h3>Abou El Sid</h3>
+<p><strong>Location:</strong> Zamalek, Cairo</p>
+<p><strong>Cuisine:</strong> Authentic Egyptian</p>
+<p>A hidden gem that captures the nostalgic essence of old Cairo. Offers traditional dishes like mahshi, molokhia, and exceptional stuffed pigeon in a vintage setting.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Call-to-Action Section -->
+<section class="cta-section" data-aos="fade-up">
+<div class="container text-center">
+<h2>Discover Cairo's Culinary Secrets</h2>
+<p>These hidden restaurants offer an authentic taste of Cairo beyond tourist trails</p>
+</div>
+</section>
+<!-- AOS (Animate on Scroll) JS -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+AOS.init({
+duration: 1000,
+offset: 200,
+once: true
+ });
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<script src="mainscript.js"></script>
+</body>
+</html>

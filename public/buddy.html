@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <br>
+  <br>
+  <title>Find a Travel Buddy in Cairo</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+<body>
+     <!-- Navigation Bar -->
+  <nav class="navbar2">
+    <div class="container">
+      <div class="logo-container">
+        <a href="index.html">
+          <img src="logo.jpeg" alt="CityWander Logo" class="logo">
+        </a>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="attractions.html" class="active">Attractions</a></li>
+        <li><a href="booking.html">Booking</a></li>
+        <li><a href="dining.html">Dining</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="reviews.html">Reviews</a></li>
+        <li><a href="surprise.html">Surprise Me</a></li>
+        <li><a href="quiz.html">Personalised Quiz</a></li>
+        <li><a href="buddy.html">Travel buddy</a></li>
+      </ul>
+       <!-- Login/Logout Section -->
+     <div id="login-container">
+      <button id="login-btn" onclick="window.location.href='login.html'">Login</button>
+      <div id="user-info" style="display:none;">
+        <span id="username"></span> <button onclick="logout()">Logout</button>
+      </div>
+    </div>
+    </div>
+  </nav>
+
+  <section class="white-section" data-aos="fade-up">
+    <div class="container">
+      <h1>Find a Travel Buddy in Cairo</h1>
+      <form id="travelBuddyForm">
+        <label for="dates">Travel Date:</label>
+        <input type="date" id="dates" required />
+        
+        <label for="interests">Your Interests:</label>
+        <select id="interests" multiple>
+          <option value="History">History</option>
+          <option value="Food">Food</option>
+          <option value="Adventure">Adventure</option>
+          <option value="Shopping">Shopping</option>
+          <option value="Relaxation">Relaxation</option>
+        </select>
+        
+        <button type="submit" id="find-buddy-button">Find a Buddy</button>
+      </form>
+      
+      <div id="results"></div>
+      <div id="chat-container" style="display: none;">
+        <div id="chat-box" style="border: 1px solid #ccc; padding: 10px; height: 300px; overflow-y: scroll; margin-bottom: 10px;">
+          <!-- Messages will appear here -->
+        </div>
+        <input type="text" id="chat-input" placeholder="Type a message..." style="width: 80%; padding: 5px;"/>
+        <button id="send-button" style="padding: 5px; cursor: pointer;">Send Message</button> <!-- Correct button ID -->
+      </div>
+      
+      
+    </div>
+  </section>
+
+  <!-- Socket.io -->
+  <script src="https://cdn.socket.io/4.7.2/socket.io.min.js"></script>
+  <script src="mainscript.js"></script>
+  <!-- custom JavaScript -->
+  <script src="script6.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

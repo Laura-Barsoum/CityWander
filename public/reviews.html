@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CityWander - Reviews</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- AOS (Animate on Scroll) Library -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+   <!-- Navigation Bar -->
+   <nav class="navbar2">
+    <div class="container">
+      <div class="logo-container">
+        <a href="index.html">
+          <img src="logo.jpeg" alt="CityWander Logo" class="logo">
+        </a>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="attractions.html" class="active">Attractions</a></li>
+        <li><a href="booking.html">Booking</a></li>
+        <li><a href="dining.html">Dining</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="reviews.html">Reviews</a></li>
+        <li><a href="surprise.html">Surprise Me</a></li>
+        <li><a href="quiz.html">Personalised Quiz</a></li>
+        <li><a href="buddy.html">Travel buddy</a></li>
+      </ul>
+       <!-- Login/Logout Section -->
+       <div id="login-container">
+        <button id="login-btn" onclick="window.location.href='login.html'">Login</button>
+        <div id="user-info" style="display:none;">
+          <span id="username"></span> <button onclick="logout()">Logout</button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section for Reviews Page -->
+  <header class="hero-section" data-aos="fade-down">
+    <div class="container text-center">
+      <h1>User Reviews</h1>
+      <p>See what travelers have to say about their Cairo adventures with CityWander.</p>
+    </div>
+  </header>
+
+  <!-- Reviews Section -->
+  <section class="white-section" data-aos="fade-up">
+    <div class="container">
+      <h2 class="text-center">What Our Travelers Are Saying</h2>
+      
+      <!-- Review 1 -->
+      <div class="review-item" data-aos="fade-right">
+        <div class="review-avatar">
+          <img src="user1.jpg" alt="User 1">
+        </div>
+        <div class="review-text">
+          <h3>John Doe</h3>
+          <p class="review-rating">★★★★★</p>
+          <p>"CityWander made my trip to Cairo unforgettable! The hidden spots we visited were so unique and beautiful. Highly recommend!"</p>
+        </div>
+      </div>
+      
+      <!-- Review 2 -->
+      <div class="review-item reverse" data-aos="fade-left">
+        <div class="review-avatar">
+          <img src="user2.jpg" alt="User 2">
+        </div>
+        <div class="review-text">
+          <h3>Jane Smith</h3>
+          <p class="review-rating">★★★★☆</p>
+          <p>"Great service! The local guides were knowledgeable and friendly. The food recommendations were delicious, too!"</p>
+        </div>
+      </div>
+      
+      <!-- Review 3 -->
+      <div class="review-item" data-aos="fade-right">
+        <div class="review-avatar">
+          <img src="user3.jpg" alt="User 3">
+        </div>
+        <div class="review-text">
+          <h3>Michael Lee</h3>
+          <p class="review-rating">★★★★★</p>
+          <p>"I loved the quirky cafes that CityWander introduced me to. Each place had its own charm. I felt like a local!"</p>
+        </div>
+      </div>
+      
+      <!-- Review 4 -->
+      <div class="review-item reverse" data-aos="fade-left">
+        <div class="review-avatar">
+          <img src="user4.jpg" alt="User 4">
+        </div>
+        <div class="review-text">
+          <h3>Sarah Johnson</h3>
+          <p class="review-rating">★★★★★</p>
+          <p>"Amazing experience! I was able to explore hidden gems that I wouldn’t have found on my own. Truly a unique experience!"</p>
+        </div>
+      </div>
+      
+    </div>
+  </section>
+
+  <!-- AOS (Animate on Scroll) JS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      offset: 200,
+      once: true
+    });
+  </script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script src="mainscript.js"></script>
+</body>
+</html>

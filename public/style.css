@@ -1,0 +1,1556 @@
+/* General Container and Text Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  color: #333;
+  overflow: visible; /* Ensure content can expand */
+  height: auto; 
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+#why-choose, #stay-connected {
+  border: 1px solid #ccc; /* Add a border for visibility */
+  padding: 20px;
+  margin: 20px 0;
+}
+
+.white-section {
+  background: #fff;
+}
+
+.cta-section {
+  background: #f9f9f9;
+}
+
+.social-links .social-btn {
+  margin: 5px;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: #fff;
+  border-radius: 5px;
+}
+
+.facebook {
+  background: #3b5998;
+}
+
+.instagram {
+  background: #c32aa3;
+}
+
+.twitter {
+  background: #1da1f2;
+}
+.text-center {
+  text-align: center;
+}
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Header Image Styles */
+.header-image {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.header-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* Transparent Navigation Bar Styles */
+.navbar {
+  background: transparent;  /* Removed the blue background */
+  backdrop-filter: none;     /* Removed the blur effect */
+  padding: 15px 30px;
+  position: absolute;        /* Positioned above the header image */
+  top: 0;                    /* Align it at the top */
+  width: 100%;
+  z-index: 100;              /* Ensure it stays on top of the image */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Optional shadow for better visibility */
+  transition: background-color 0.3s ease;
+}
+
+.header-image {
+  margin-top: 0; /* No margin needed, position navbar above it */
+}
+
+.hero-section {
+  padding: 100px 0; /* Ensure enough space for the hero section */
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: fadeInDown 1.5s forwards;
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+.navbar2 .logo-container {
+  max-width: 130px;
+  margin-right: auto; /* Pushes the logo to the far left */
+  padding-left: 20px; /* Optional: Adds some space from the edge of the screen */
+}
+.navbar .logo {
+  max-width: 130px;
+  transition: transform 0.3s ease-in-out;
+  margin-right: auto; /* Pushes the logo to the far left */
+  padding-left: 20px; /* Optional: Adds some space from the edge of the screen */
+}
+
+.navbar .logo:hover {
+  transform: scale(1.05);
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 5px;
+}
+
+.navbar li {
+  position: relative;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #f4f4f4;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 10px 15px;
+  border-radius: 6px;
+  position: relative; /* Required for the circular hover effect */
+  transition: color 0.3s, background-color 0.3s;
+}
+
+/* Circular Hover Effect */
+.navbar a::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.3s ease, height 0.3s ease;
+  z-index: -1; /* Circle behind text */
+}
+
+.navbar a:hover::before {
+  width: 40px; /* Circle size on hover */
+  height: 40px;
+}
+
+.navbar a:hover {
+  color: #3182ce; /* Color change on hover */
+}
+
+.navbar a.active {
+  background-color: #004b97;
+  color: white;
+}
+
+ /* Hero Section Styles */
+ .hero-section {
+  position: relative;
+  background: linear-gradient(to right, rgba(0, 86, 179, 0.7), rgba(49, 130, 206, 0.7)), 
+              url('your-pyramids-image.jpg') no-repeat center center;
+  background-size: cover; /* Ensure the pyramids image covers the section */
+  color: white;
+  padding: 80px 20px;
+  text-align: center;
+  height: 50vh; /* Full viewport height */
+}
+
+.hero-section h1 {
+  font-size: clamp(2.5rem, 8vw, 4rem);
+  margin-bottom: 20px;
+}
+
+.hero-section p {
+  font-size: 1.2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  font-weight: 300;
+}
+
+/* Position the text above the background */
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Centers the text */
+  z-index: 1; /* Ensure the text is on top of the background */
+}
+/* Section - Why Choose */
+.white-section {
+  background-color: white;
+  padding: 50px 0; /* Reduced padding to decrease space after the hero section */
+  box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.white-section h2 {
+  font-size: clamp(2.5rem, 5vw, 3rem);
+  color: #333;
+  text-align: center;
+  margin-bottom: 40px;
+  font-weight: 700;
+  opacity: 0;
+  animation: fadeInUp 1.5s forwards;
+}
+
+.white-section p {
+  font-size: 1.2rem;
+  color: #666;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.8;
+}
+
+/* Why Choose - Features Grid */
+.white-section .features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.white-section .feature-card {
+  background-color: #f4f4f4;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.white-section .feature-card:hover {
+  transform: translateY(-10px);
+}
+
+/* Stay Connected Section */
+.cta-section {
+  background-color: #e0f7fa;
+  padding: 60px 0;
+  border-top: 5px solid #004b97;
+  text-align: center;
+  font-family: 'Roboto';
+}
+
+.cta-section h2 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.cta-section p {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.social-btn {
+  background-color: #004b97;
+  color: white;
+  padding: 10px 20px;
+  margin: 0 10px;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.social-btn:hover {
+  background-color: #3182ce;
+}
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+footer p {
+  margin: 0;
+}
+
+/* Login Page Styling */
+.login-section {
+  background-color: #ffffff;
+  padding: 60px 20px;
+  max-width: 500px;
+  margin: 50px auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  text-align: center;
+}
+
+.login-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+label {
+  font-size: 1rem;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+input[type="text"], input[type="password"] {
+  width: 100%;
+  padding: 12px;
+  margin: 5px 0;
+  color: #333; /* Dark text color */
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+input[type="text"]:focus, input[type="password"]:focus {
+  border-color: #004b97;
+}
+
+button.submit-btn {
+  background-color: #004b97;
+  color: white;
+  padding: 12px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button.submit-btn:hover {
+  background-color: #3182ce;
+}
+
+p {
+  font-size: 1rem;
+}
+
+a {
+  color: #004b97;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .navbar .container {
+    flex-direction: column;
+  }
+
+ /* Navigation Menu (when stacked vertically) */
+.navbar ul {
+  flex-direction: column; /* Stack navbar items vertically */
+  width: 100%; /* Make the navbar take full width */
+  margin-top: 20px; /* Adds some space above the navbar items */
+  gap: 15px; /* Space between navbar items */
+}
+
+
+  /* Navigation Links (when stacked vertically) */
+.navbar a {
+  width: 100%; /* Make each link take full width */
+  text-align: left; /* Align text to the left inside the link */
+  padding: 12px; /* Add padding inside each navbar link */
+  border-radius: 6px; /* Optional: rounded corners for each link */
+  background-color: #004b97; /* Optional: background color for links */
+  color: #f4f4f4; /* Text color */
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effect */
+}
+
+  .hero-section h1 {
+    font-size: 2.8rem;
+  }
+
+  .hero-section p {
+    font-size: 1.1rem;
+  }
+
+  .cta-section h2 {
+    font-size: 2rem;
+  }
+
+  .white-section h2 {
+    font-size: 2.2rem;
+  }
+
+  .white-section p {
+    font-size: 1rem;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  /* Login page adjustments for smaller screens */
+  .login-section {
+    padding: 40px 20px;
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .login-section h2 {
+    font-size: 2rem;
+  }
+}
+
+.navbar2 {
+  background: #004b97;
+  height: 90px; /* Set a specific height */
+  padding: 0 15px; /* Remove vertical padding, only horizontal remains */
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
+}
+
+
+/* Container for the navbar content */
+.navbar2 .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo container styling */
+.navbar2 .logo-container {
+  max-width: 100px;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Logo image */
+.navbar2 .logo-container img {
+  width: 100%;
+  height: auto;
+}
+
+/* Hover effect for the logo */
+.navbar2 .logo-container:hover {
+  transform: scale(1.05);
+}
+
+/* Navigation menu */
+.navbar2 ul {
+  list-style: none;
+  display: flex;
+  gap: 10px; /* Reduced space between nav items */
+}
+
+/* Individual navigation items */
+.navbar2 li {
+  position: relative;
+}
+
+/* Navigation links styling */
+.navbar2 a {
+  text-decoration: none;
+  color: #f4f4f4;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 8px 12px; /* Reduced padding to reduce space */
+  border-radius: 6px;
+  position: relative;
+  transition: color 0.3s, background-color 0.3s;
+}
+
+/* Hover effect for navigation links */
+.navbar2 a:hover {
+  color: #3182ce;
+}
+
+/* Responsive adjustments for smaller screens (if needed) */
+@media (max-width: 768px) {
+  .navbar2 {
+    padding: 10px 15px; /* Reduce padding on smaller screens */
+  }
+  .navbar2 .container {
+    flex-direction: column; /* Stack logo and links vertically */
+  }
+  .navbar2 ul {
+    flex-direction: column; /* Stack links vertically */
+    gap: 8px; /* Smaller gap between links */
+  }
+}
+
+
+/* Hero Section */
+.hero-section {
+  background: linear-gradient(to right, #000000, #0d2c8c);
+  color: white;
+  padding: 100px 0;
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: fadeInDown 1.5s forwards;
+  margin-top: 70px;
+}
+
+.hero-section h1 {
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  margin-bottom: 20px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.hero-section p {
+  font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.hero-section:hover h1 {
+  transform: scale(1.05);
+}
+
+/* Login Page Styling */
+.login-section {
+  background-color: #ffffff;
+  padding: 60px 20px;
+  max-width: 500px;
+  margin: 150px auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  text-align: center;
+  animation: fadeInUp 1.5s forwards;
+}
+
+.login-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+label {
+  font-size: 1rem;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+input[type="text"], input[type="password"] {
+  width: 100%;
+  padding: 12px;
+  margin: 5px 0;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus, input[type="password"]:focus {
+  border-color: #004b97;
+}
+
+button.submit-btn {
+  background-color: #004b97;
+  color: white;
+  padding: 12px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button.submit-btn:hover {
+  background-color: #3182ce;
+}
+/* Register Section */
+.register-section {
+  padding: 200px 0 60px 0; /* Adding more padding on top */
+  background: #ffffff; /* Light background for the register section */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Light shadow for better separation */
+}
+
+.register-section h2 {
+  font-size: 2.5rem;
+  color: #333;
+  text-align: center;
+  margin-bottom: 30px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.register-section form {
+  max-width: 500px;
+  margin: 0 auto;
+  background: #f9f9f9;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.register-section .form-group {
+  margin-bottom: 20px;
+}
+
+.register-section label {
+  display: block;
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.register-section input[type="text"],
+.register-section input[type="email"],
+.register-section input[type="password"] {
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  outline: none;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+.register-section input[type="text"]:focus,
+.register-section input[type="email"]:focus,
+.register-section input[type="password"]:focus {
+  border-color: #004b97; /* Blue border on focus */
+  box-shadow: 0 0 5px rgba(0, 75, 151, 0.5); /* Subtle shadow on focus */
+}
+
+.register-section button.submit-btn {
+  background-color: #004b97;
+  color: white;
+  padding: 12px 20px;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 5px;
+  width: 100%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.register-section button.submit-btn:hover {
+  background-color: #3182ce;
+}
+
+.register-section p {
+  text-align: center;
+  font-size: 1rem;
+}
+
+.register-section a {
+  color: #004b97;
+  text-decoration: none;
+}
+
+.register-section a:hover {
+  text-decoration: underline;
+}
+
+/* Footer Styles */
+footer {
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+footer p {
+  margin: 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .register-section form {
+    padding: 30px 20px;
+    width: 90%; /* Make the form more responsive */
+  }
+
+  .register-section h2 {
+    font-size: 2rem;
+  }
+
+  .register-section input[type="text"],
+  .register-section input[type="email"],
+  .register-section input[type="password"] {
+    padding: 10px;
+  }
+
+  .register-section button.submit-btn {
+    padding: 10px 15px;
+  }
+}
+.swipe-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f4f4f4;
+}
+
+#cards-container {
+  position: relative;
+  width: 90%;
+  max-width: 400px;
+  height: 600px;
+}
+
+.card {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  transition: transform 0.2s ease-out, opacity 0.3s ease-out;
+  will-change: transform;
+  transform: translate3d(0, 0, 0);
+}
+
+.card img {
+  width: 100%;
+  height: 60%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.card h3 {
+  margin: 1rem 0 0.5rem 0;
+}
+
+.card p {
+  color: #666;
+  text-align: center;
+}
+
+/* Card states */
+.card.inactive {
+  opacity: 0;
+  transform: scale(0.9);
+  pointer-events: none;
+}
+
+.card.active {
+  opacity: 1;
+  transform: translateX(0) scale(1);
+  pointer-events: auto;
+  z-index: 10;
+}
+
+.card.swiping-right {
+  transform: translateX(200%) rotate(20deg);
+  opacity: 0;
+}
+
+.card.swiping-left {
+  transform: translateX(-200%) rotate(-20deg);
+  opacity: 0;
+}
+.card.swiped {
+  transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+}
+
+/* Modal styles */
+.modal {
+  display: none;  /* Initially hidden */
+  position: fixed;
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+  overflow: auto; /* Enables scrolling if necessary */
+  padding-top: 60px;
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Set a max width for better responsiveness */
+  max-width: 600px; /* Prevent the modal from being too wide */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Align items at the top */
+  height: auto;  /* Ensure the content can grow if needed */
+}
+
+/* Close button */
+.close-btn {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Form styles */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Space between form elements */
+  margin-top: 10px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.cta-btn {
+  padding: 15px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.cta-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Matched Section */
+.matched {
+  display: none;
+  margin-top: 2rem;
+  padding: 1rem;
+  background: #f9f9f9;
+  border-top: 2px solid #007BFF;
+}
+
+.matched h2 {
+  margin-bottom: 1rem;
+}
+
+.matched ul {
+  list-style: none;
+  padding: 0;
+}
+
+.matched ul li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.matched ul li:last-child {
+  border-bottom: none;
+}
+#why-choose, #stay-connected {
+  display: block; /* Make sure they are displayed */
+  opacity: 1;     /* Ensure they are fully visible */
+  transform: none; /* Ensure no transformation is applied */
+}
+/* Service images displayed next to each other */
+.service-items {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px; /* Add space between images */
+  flex-wrap: wrap; /* Allow wrapping if space is tight */
+}
+.service-item {
+  text-align: center;
+  cursor: pointer;
+  flex: 1 1 30%; /* Flexbox to make images responsive */
+}
+.service-item img {
+  width: 100%;
+  max-width: 300px; /* Limit image size */
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+.service-item img:hover {
+  transform: scale(1.1); /* Hover effect */
+}
+
+/* Modal Style */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.modal-content {
+  background-color: #fff;
+  margin: 10% auto;
+  padding: 20px;
+  border-radius: 10px;
+  width: 50%;
+  position: relative;
+}
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 30px;
+  cursor: pointer;
+}
+/* Avatar Styling */
+.review-avatar {
+  width: 80px; /* Fixed width for all avatars */
+  height: 80px; /* Fixed height for all avatars */
+  border-radius: 50%; /* Makes avatars circular */
+  overflow: hidden; /* Ensures the image fits inside the circle */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow for depth */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.review-avatar img {
+  width: 100%; /* Make sure the image fills the circle */
+  height: 100%;
+  object-fit: cover; /* Ensures the image is cropped to fit inside the circle */
+}
+
+/* Hover Effect for Avatars */
+.review-avatar:hover {
+  transform: scale(1.1); /* Slight zoom-in effect */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15); /* A bit larger shadow on hover */
+}
+
+/* Review Item Styling */
+.review-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.review-item:hover {
+  transform: translateY(-5px); /* Slight lift effect on hover */
+}
+
+/* Add spacing between avatar and review text */
+.review-item .review-avatar {
+  margin-right: 15px;
+}
+
+/* Adjustments for Reverse Layout */
+.review-item.reverse {
+  flex-direction: row-reverse;
+  text-align: right; /* Align text to the right for reverse layout */
+}
+
+.review-item .review-text {
+  max-width: 500px;
+}
+
+/* Text and Rating Styling */
+.review-text h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.review-rating {
+  color: #ffb700;
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
+
+.review-text p {
+  font-size: 1rem;
+  color: #666;
+}
+/* Add this to your style.css */
+#instructions-modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+  z-index: 1000; /* Ensure modal is on top of other elements */
+  visibility: hidden; /* Default hidden */
+  opacity: 0;
+  transition: visibility 0s, opacity 0.3s ease-in-out;
+}
+
+#instructions-modal.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.modal-content h2 {
+  margin-bottom: 1rem;
+}
+
+.modal-content button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.modal-content button:hover {
+  background-color: #0056b3;
+}
+button#surpriseBtn {
+  display: block; /* Ensure the button is displayed */
+  margin: 20px auto; /* Center the button */
+  padding: 10px 20px; /* Add padding for better visibility */
+  font-size: 16px; /* Make the text readable */
+  background-color: #4CAF50; /* Add a background color */
+  color: white; /* Text color */
+  border: none; /* Remove border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+button#surpriseBtn:hover {
+  background-color: #45a049; /* Slightly darker shade on hover */
+}
+/* Button Styles */
+.creative-button {
+  font-family: 'Roboto', sans-serif;
+  font-size: 24px;
+  padding: 20px 40px;
+  color: #fff;
+  background: linear-gradient(45deg, #fc4a1a, #f8b500);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease-in-out;
+}
+
+.creative-button:hover {
+  transform: scale(1.1);
+  background: linear-gradient(45deg, #f8b500, #fc4a1a);
+  box-shadow: 0px 12px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Gem Details */
+.gem-details {
+  margin-top: 30px;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 15px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.gem-details p {
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.gem-details img {
+  margin-top: 20px;
+  width: 80%;
+  border-radius: 15px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .main-content h1 {
+    font-size: 2rem;
+  }
+
+  .creative-button {
+    font-size: 20px;
+    padding: 15px 30px;
+  }
+}
+.main-content {
+  margin-top: 70px; /* Adds space between the navbar and the main content */
+  padding: 20px; /* Optional: Add padding for better layout */
+}
+/* Quiz Container */
+.quiz-container {
+  margin: 50px auto;
+  max-width: 600px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  border-radius: 15px;
+}
+
+.quiz-container h1 {
+  font-family: 'Pacifico', cursive;
+  font-size: 2.5rem;
+  color: #fcb69f;
+  margin-bottom: 20px;
+}
+
+.quiz-form .question {
+  margin: 20px 0;
+}
+
+.quiz-form .question p {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.quiz-form label {
+  display: block;
+  margin: 10px 0;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.quiz-submit {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  color: #fff;
+  background: linear-gradient(45deg, #fcb69f, #ff758c);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.quiz-submit:hover {
+  transform: scale(1.1);
+  background: linear-gradient(45deg, #ff758c, #fcb69f);
+}
+
+/* Result Section */
+.quiz-result {
+  margin-top: 20px;
+  padding: 20px;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.quiz-result h2 {
+  font-size: 1.5rem;
+  color: #ff758c;
+}
+
+.quiz-result img {
+  margin-top: 20px;
+  max-width: 100%;
+  border-radius: 15px;
+}
+ /* Dining Section */
+ .white-section2 {
+  background: #f9f9f9;
+  padding: 50px 20px;
+}
+.white-section2 h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.dining-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+.dining-item {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.dining-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+.dining-item h3 {
+  color: #f4c430;
+}
+ /* Transportation Cards */
+    .transport-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      padding: 20px 0;
+    }
+    .transport-item {
+      background: white;
+      border: 1px solid #ddd;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .transport-item:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    }
+    .transport-item img {
+      width: 60px;
+      margin-bottom: 15px;
+    }
+    .transport-item h3 {
+      margin-bottom: 15px;
+      color: #f4c430;
+    }
+    .transport-item p {
+      font-size: 0.95rem;
+      color: #555;
+    }
+
+/* Travel Buddy Matching Results */
+#results {
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#results h2 {
+  margin-bottom: 15px;
+}
+
+#results p {
+  font-size: 1.1rem;
+}
+
+/* Chat Section */
+#chat-box {
+  background-color: #fff;
+  height: 300px;
+  padding: 15px;
+  border-radius: 8px;
+  overflow-y: auto;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#chat-input {
+  width: 80%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+#send-btn {
+  width: 18%;
+  padding: 10px;
+  background-color: #2C3E50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+#send-btn:hover {
+  background-color: #34495e;
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+  .container {
+    width: 95%;
+  }
+
+  form input, form select, form button, #chat-input, #send-btn {
+    width: 100%;
+  }
+
+  #send-btn {
+    margin-top: 10px;
+  }
+
+  #chat-box {
+    height: 250px;
+  }
+}
+
+/* Loader */
+.loader {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #3498db;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+#chat-box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 10px;
+  max-height: 300px; /* Prevents the chat box from expanding too much */
+  overflow-y: auto;  /* Allows scrolling if there are too many messages */
+}
+
+.message {
+  max-width: 70%;  /* Adjust width based on your preference */
+  padding: 10px;
+  border-radius: 15px;  /* Rounded corners */
+  margin: 5px 0;
+  word-wrap: break-word;
+  font-size: 14px;
+}
+
+.user-message {
+  background-color: #007bff;  /* Blue color for user messages */
+  color: white;
+  align-self: flex-end;  /* Align to the right */
+}
+
+.buddy-message {
+  background-color: #f1f1f1;  /* Light gray color for buddy messages */
+  color: black;
+  align-self: flex-start;  /* Align to the left */
+}
+
+#chat-container {
+  display: block;
+  margin-top: 10px;
+}
+
+#chat-input {
+  width: 80%;
+  padding: 5px;
+  border-radius: 5px;
+  margin-right: 5px;
+}
+
+#send-button {
+  padding: 5px;
+  cursor: pointer;
+}
+/* Chat Container (Initially hidden) */
+.chat-container {
+  position: fixed;
+  bottom: 80px;
+  right: 20px; /* Changed from left to right */
+  width: 300px;
+  height: 400px;
+  background-color: white;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  display: none;
+  flex-direction: column;
+}
+
+.chat-box {
+  flex: 1;
+  padding: 10px;
+  overflow-y: auto;
+}
+
+#chat-input {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+#send-message {
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+#send-message:hover {
+  background-color: #0056b3;
+}
+#login-container {
+  display: flex;
+  align-items: center; /* Align vertically with navbar links */
+  margin-left: 20px; /* Add spacing from the nav links */
+}
+
+#login-btn {
+  background-color: #3182ce;
+  color: #ffffff;
+  font-size: 0.9rem;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#login-btn:hover {
+  background-color: #285e8e;
+}
+
+#user-info {
+  display: flex;
+  align-items: center; /* Align user info elements */
+  gap: 10px;
+}
+
+#username {
+  color: #ffffff;
+  font-weight: bold;
+}
+
+#user-info button {
+  background-color: #ff4d4d;
+  color: #ffffff;
+  font-size: 0.8rem;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#user-info button:hover {
+  background-color: #cc0000;
+}
+
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  color: #333; /* Set a dark color for input text */
+  font-size: 16px;
+  background-color: white; /* Ensure the background is white for contrast */
+}
+
+
+.login-section, .register-section {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: #333;
+  font-weight: 500;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 12px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.submit-btn:hover {
+  background-color: #0056b3;
+}
+body .form-group input {
+  color: #333 !important;
+  background-color: white !important;
+}

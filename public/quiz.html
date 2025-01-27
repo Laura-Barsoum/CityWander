@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hidden Gem Quiz</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Pacifico&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar2">
+      <div class="container">
+        <div class="logo-container">
+          <a href="index.html">
+            <img src="logo.jpeg" alt="CityWander Logo" class="logo">
+          </a>
+        </div>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="attractions.html" class="active">Attractions</a></li>
+          <li><a href="booking.html">Booking</a></li>
+          <li><a href="dining.html">Dining</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="reviews.html">Reviews</a></li>
+          <li><a href="surprise.html">Surprise Me</a></li>
+          <li><a href="quiz.html">Personalized Quiz</a></li>
+          <li><a href="buddy.html">Travel buddy</a></li>
+        </ul>
+        <div id="login-container">
+          <button id="login-btn" onclick="window.location.href='login.html'">Login</button>
+          <div id="user-info" style="display:none;">
+            <span id="username"></span> <button onclick="logout()">Logout</button>
+          </div>
+        </div>
+      </div>
+    </nav>
+  
+  <div class="quiz-container">
+    <h1>What's Your Perfect Hidden Gem in Cairo?</h1>
+    <form id="quizForm" class="quiz-form">
+      <div class="question">
+        <p>What type of place do you enjoy most?</p>
+        <label>
+          <input type="radio" name="type" value="history"> Historical Sites
+        </label>
+        <label>
+          <input type="radio" name="type" value="nature"> Nature & Gardens
+        </label>
+        <label>
+          <input type="radio" name="type" value="food"> Hidden Food Spots
+        </label>
+      </div>
+
+      <div class="question">
+        <p>What's your ideal way to spend a day in Cairo?</p>
+        <label>
+          <input type="radio" name="activity" value="quiet"> Relaxing and Peaceful
+        </label>
+        <label>
+          <input type="radio" name="activity" value="adventure"> Exploring & Active
+        </label>
+      </div>
+
+      <button type="submit" class="quiz-submit">Discover Your Gem!</button>
+    </form>
+
+    <div id="result" class="quiz-result" style="display: none;">
+      <h2>Your Perfect Hidden Gem:</h2>
+      <p id="gemRecommendation"></p>
+      <img id="gemImage" src="" alt="">
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script src="quiz.js"></script>
+  <script src="mainscript.js"></script>
+</body>
+</html>

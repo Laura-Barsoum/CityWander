@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CityWander - Cairo Events</title>
+  <link rel="stylesheet" href="style.css">
+
+  <!-- AOS (Animate on Scroll) Library -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+<body>
+<!-- Navigation Bar -->
+<nav class="navbar2">
+  <div class="container">
+    <div class="logo-container">
+      <a href="index.html">
+        <img src="logo.jpeg" alt="CityWander Logo" class="logo">
+      </a>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="attractions.html" class="active">Attractions</a></li>
+      <li><a href="booking.html">Booking</a></li>
+      <li><a href="dining.html">Dining</a></li>
+      <li><a href="events.html">Events</a></li>
+      <li><a href="reviews.html">Reviews</a></li>
+      <li><a href="surprise.html">Surprise Me</a></li>
+      <li><a href="quiz.html">Personalised Quiz</a></li>
+      <li><a href="buddy.html">Travel buddy</a></li>
+    </ul>
+     <!-- Login/Logout Section -->
+     <div id="login-container">
+      <button id="login-btn" onclick="window.location.href='login.html'">Login</button>
+      <div id="user-info" style="display:none;">
+        <span id="username"></span> <button onclick="logout()">Logout</button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+  <!-- Hero Section for Events -->
+  <header class="hero-section" data-aos="fade-down">
+    <div class="container text-center">
+      <h1>Discover Exciting Events in Cairo</h1>
+      <p>Explore what's happening around Cairo and make the most of your visit!</p>
+    </div>
+  </header>
+  
+  <!-- Event Listings Section -->
+  <section class="white-section" data-aos="fade-up">
+    <div class="container">
+      <h2>Upcoming Events</h2>
+      <div class="event-list">
+
+        <!-- Event 1 -->
+        <div class="event-item" data-aos="fade-right">
+          <h3>Traditional Music Festival</h3>
+          <p><strong>Date:</strong> December 15, 2023</p>
+          <p><strong>Location:</strong> Cairo Opera House</p>
+          <p>Celebrate Cairo’s musical heritage at the annual Traditional Music Festival. Enjoy live performances, workshops, and cultural exhibits.</p>
+        </div>
+
+        <!-- Event 2 -->
+        <div class="event-item" data-aos="fade-left">
+          <h3>Artisan Market</h3>
+          <p><strong>Date:</strong> January 5, 2024</p>
+          <p><strong>Location:</strong> Downtown Cairo</p>
+          <p>Browse unique handmade goods, artwork, and crafts by local artisans. A perfect spot for picking up one-of-a-kind souvenirs.</p>
+        </div>
+
+        <!-- Event 3 -->
+        <div class="event-item" data-aos="fade-right">
+          <h3>Food & Culture Fair</h3>
+          <p><strong>Date:</strong> February 10, 2024</p>
+          <p><strong>Location:</strong> Zamalek Park</p>
+          <p>Taste your way through Cairo’s diverse cuisine at the Food & Culture Fair. Indulge in local flavors while enjoying live music and cultural displays.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Call-to-Action Section -->
+  <section class="cta-section" data-aos="fade-up">
+    <div class="container text-center">
+      <h2>Ready to Experience Cairo's Vibrant Events?</h2>
+    </div>
+  </section>
+
+  <!-- AOS (Animate on Scroll) JS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      offset: 200,
+      once: true
+    });
+  </script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script src="mainscript.js"></script>
+  <script src="events.js"></script>
+</body>
+</html>

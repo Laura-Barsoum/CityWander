@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Surprise Me! Button</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Pacifico&display=swap" rel="stylesheet">
+</head>
+<body>
+  <nav class="navbar2">
+    <div class="container">
+      <div class="logo-container">
+        <a href="index.html">
+          <img src="logo.jpeg" alt="CityWander Logo" class="logo">
+        </a>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="attractions.html" class="active">Attractions</a></li>
+        <li><a href="booking.html">Booking</a></li>
+        <li><a href="dining.html">Dining</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="reviews.html">Reviews</a></li>
+        <li><a href="surprise.html">Surprise Me</a></li>
+        <li><a href="quiz.html">Personalized Quiz</a></li>
+        <li><a href="buddy.html">Travel buddy</a></li>
+      </ul>
+      <div id="login-container">
+        <button id="login-btn" onclick="window.location.href='login.html'">Login</button>
+        <div id="user-info" style="display:none;">
+          <span id="username"></span> <button onclick="logout()">Logout</button>
+        </div>
+      </div>
+    </div>
+  </nav>
+  
+  <!-- Main Content -->
+  <div class="main-content">
+    <h1>Discover Cairo's Hidden Gems</h1>
+    <button id="surpriseBtn" class="creative-button">🎉 Surprise Me! 🎉</button>
+    <div id="gemDetails" class="gem-details">
+      <p id="gemName">Click the button to discover a hidden gem!</p>
+      <p id="gemDescription"></p>
+      <img id="gemImage" src="" alt="" style="display: none;">
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script src="script5.js"></script>
+  <script src="mainscript.js"></script>
+</body>
+</html>

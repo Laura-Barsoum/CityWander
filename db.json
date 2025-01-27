@@ -1,0 +1,333 @@
+{
+  "users": [
+    {
+      "id": "1737438008333",
+      "fullName": "laura",
+      "email": "laurahani@yahoo.com",
+      "password": "$2a$10$Nam5N5lQulULK3Fmloe8qucHk7xel7YlvtNLQbLLEQxqc18kAoxkG",
+      "createdAt": "2025-01-21T05:40:08.333Z"
+    },
+    {
+      "id": "1737438351908",
+      "fullName": "Laura Barsoum",
+      "email": "laurahani2003@yahoo.com",
+      "password": "$2a$10$fcGNzC1EvpuSOnqHWscpsOeYHiGyg11X2YrdN0w.EFUcJcmhEd/gK",
+      "createdAt": "2025-01-21T05:45:51.909Z"
+    },
+    {
+      "id": "1737444333696",
+      "fullName": "laura",
+      "email": "laurahani2003@gmail.com",
+      "password": "$2a$10$4lqAkmZRs4NKS5Oh5wFvE.DFrZT7MWfFcPg68ubMHigYq9NGPIoI6",
+      "createdAt": "2025-01-21T07:25:33.697Z"
+    },
+    {
+      "id": "1737444871463",
+      "fullName": "laura",
+      "email": "laurahani2@yahoo.com",
+      "password": "$2a$10$pkyM2VvTw7UHzoaopmbpSeQ8Uo.NMXVGbrEcROn5.vh3dGqRSChn6",
+      "createdAt": "2025-01-21T07:34:31.463Z"
+    },
+    {
+      "id": "1737444904318",
+      "fullName": "laura",
+      "email": "laurahani2@gmail.com",
+      "password": "$2a$10$Y6JXLXzBi0t6IyzB1oG14OsLuOcX25c4qiHldT0hOscQwHyNFhx4i",
+      "createdAt": "2025-01-21T07:35:04.318Z"
+    },
+    {
+      "id": "1737448011574",
+      "fullName": "laura",
+      "email": "laurahani233@yahoo.com",
+      "password": "$2a$10$FniiBbweK8PyroB3Oi4tfuC7NFScYbG.WJW55kVF55pP62Gqpfk8O",
+      "createdAt": "2025-01-21T08:26:51.575Z"
+    },
+    {
+      "id": "1737448304448",
+      "fullName": "ahmed",
+      "email": "ahmedmohamed@yahoo.com",
+      "password": "$2a$10$XHfwAyJtN3O7zBypFasyY.vxOrkUbgvd8rq9zMt3RGiqglLtfssrq",
+      "createdAt": "2025-01-21T08:31:44.449Z"
+    },
+    {
+      "id": "1737449343746",
+      "fullName": "hello",
+      "email": "hello@yahoo.com",
+      "password": "$2a$10$1Tr8EW.Y4aIk.QHUr9oE.eqFMcWlg9l4NpJ/Gu/RlXk0RlvAFonDS",
+      "createdAt": "2025-01-21T08:49:03.746Z"
+    },
+    {
+      "id": "1737589599072",
+      "fullName": "example",
+      "email": "example@yahoo.com",
+      "password": "$2a$10$r.zkpvdDdeD2Pk5MLoA5o.gUaEQHGBWEcIWZ.9ckIfGKnCXmA3hNy",
+      "createdAt": "2025-01-22T23:46:39.072Z"
+    },
+    {
+      "id": "1737591751344",
+      "fullName": "example",
+      "email": "example@gmail.com",
+      "password": "$2a$10$GF2r6Px/1VAF4cbs01hBs.ZHKc4/3Ep4nLpBS6/A1nqOBo0k477ru",
+      "createdAt": "2025-01-23T00:22:31.344Z"
+    }
+  ],
+  "bookings": [
+    {
+      "id": "1737434668050",
+      "name": "Laura ",
+      "email": "laurahani2003@yahoo.com",
+      "phone": "012",
+      "date": "2025-01-31",
+      "numPeople": 2,
+      "message": "",
+      "serviceName": "Standard Tour",
+      "createdAt": "2025-01-21T04:44:28.050Z",
+      "status": "pending"
+    }
+  ],
+  "buddyRequests": [
+    {
+      "id": "1737436643576",
+      "date": "2025-01-22",
+      "interests": [
+        "Adventure"
+      ],
+      "userId": "user_1737436636028",
+      "createdAt": "2025-01-21T05:17:23.576Z"
+    },
+    {
+      "id": "1737437086576",
+      "userId": "user_1737437075270",
+      "date": "2025-01-29",
+      "interests": [
+        "Shopping"
+      ],
+      "status": "matched",
+      "createdAt": "2025-01-21T05:24:46.576Z"
+    },
+    {
+      "id": "1737437097015",
+      "userId": "user_1737437091196",
+      "date": "2025-01-29",
+      "interests": [
+        "Shopping"
+      ],
+      "status": "matched",
+      "createdAt": "2025-01-21T05:24:57.016Z"
+    },
+    {
+      "id": "1737437113977",
+      "userId": "user_1737437108889",
+      "date": "2025-01-29",
+      "interests": [
+        "Shopping"
+      ],
+      "status": "matched",
+      "createdAt": "2025-01-21T05:25:13.979Z"
+    },
+    {
+      "userId": "1737589599072",
+      "date": "2025-01-30",
+      "interests": [
+        "Shopping"
+      ],
+      "status": "matched"
+    },
+    {
+      "userId": "1737589599072",
+      "date": "2025-01-29",
+      "interests": [
+        "Shopping"
+      ],
+      "status": "matched"
+    },
+    {
+      "userId": "1737589599072",
+      "date": "2025-01-28",
+      "interests": [
+        "Shopping"
+      ],
+      "status": "matched"
+    },
+    {
+      "userId": "1737589599072",
+      "date": "2025-01-27",
+      "interests": [
+        "Shopping"
+      ],
+      "status": "matched"
+    },
+    {
+      "userId": "1737589599072",
+      "date": "2025-01-27",
+      "interests": [
+        "Adventure"
+      ],
+      "status": "matched"
+    },
+    {
+      "userId": "1737589599072",
+      "date": "2025-01-29",
+      "interests": [
+        "Adventure"
+      ],
+      "status": "matched"
+    },
+    {
+      "userId": "1737589599072",
+      "date": "2025-01-29",
+      "interests": [
+        "Shopping"
+      ],
+      "status": "matched"
+    },
+    {
+      "userId": "1737589599072",
+      "date": "2025-01-29",
+      "interests": [
+        "Shopping"
+      ],
+      "status": "matched"
+    },
+    {
+      "userId": "1737589599072",
+      "date": "2025-01-29",
+      "interests": [
+        "Shopping"
+      ],
+      "status": "matched"
+    },
+    {
+      "userId": "1737589599072",
+      "date": "2025-01-29",
+      "interests": [
+        "Shopping"
+      ],
+      "status": "matched"
+    },
+    {
+      "userId": "1737591751344",
+      "date": "2025-01-29",
+      "interests": [
+        "Shopping"
+      ],
+      "status": "matched"
+    },
+    {
+      "userId": "1737591751344",
+      "date": "2025-01-29",
+      "interests": [
+        "Shopping"
+      ],
+      "status": "matched"
+    },
+    {
+      "userId": "1737591751344",
+      "date": "2025-01-31",
+      "interests": [
+        "Shopping"
+      ],
+      "status": "matched"
+    }
+  ],
+  "buddyMatches": [
+    {
+      "id": "1737437097020",
+      "users": [
+        "user_1737437091196",
+        "user_1737437075270"
+      ],
+      "date": "2025-01-29",
+      "commonInterests": [
+        "Shopping"
+      ],
+      "status": "pending",
+      "createdAt": "2025-01-21T05:24:57.021Z"
+    }
+  ],
+  "sessions": [
+    {
+      "id": "1737444333699",
+      "userId": "1737444333696",
+      "createdAt": "2025-01-21T07:25:33.699Z"
+    },
+    {
+      "id": "1737444871464",
+      "userId": "1737444871463",
+      "createdAt": "2025-01-21T07:34:31.464Z"
+    },
+    {
+      "id": "1737444904320",
+      "userId": "1737444904318",
+      "createdAt": "2025-01-21T07:35:04.320Z"
+    },
+    {
+      "id": "1737446149215",
+      "userId": "1737438351908",
+      "createdAt": "2025-01-21T07:55:49.215Z"
+    },
+    {
+      "id": "1737448011576",
+      "userId": "1737448011574",
+      "createdAt": "2025-01-21T08:26:51.576Z"
+    },
+    {
+      "id": "1737448304452",
+      "userId": "1737448304448",
+      "createdAt": "2025-01-21T08:31:44.452Z"
+    },
+    {
+      "id": "1737449343747",
+      "userId": "1737449343746",
+      "createdAt": "2025-01-21T08:49:03.747Z"
+    },
+    {
+      "id": "1737591751347",
+      "userId": "1737591751344",
+      "createdAt": "2025-01-23T00:22:31.347Z"
+    },
+    {
+      "id": "1737592164995",
+      "userId": "1737589599072",
+      "createdAt": "2025-01-23T00:29:24.995Z"
+    }
+  ],
+  "matches": [
+    {
+      "id": "match_6f8cmwgx8",
+      "users": [
+        "1737589599072",
+        "user_1737437108889"
+      ],
+      "date": "2025-01-29",
+      "interests": [
+        "Shopping"
+      ],
+      "createdAt": "2025-01-22T23:52:30.827Z"
+    },
+    {
+      "id": "match_5bzvdbxmz",
+      "users": [
+        "1737591751344",
+        "1737589599072"
+      ],
+      "date": "2025-01-29",
+      "interests": [
+        "Shopping"
+      ],
+      "createdAt": "2025-01-23T00:22:39.896Z"
+    },
+    {
+      "id": "match_x66mh8eg9",
+      "users": [
+        "1737589599072",
+        "1737591751344"
+      ],
+      "date": "2025-01-31",
+      "interests": [
+        "Shopping"
+      ],
+      "createdAt": "2025-01-23T00:29:30.241Z"
+    }
+  ]
+}
